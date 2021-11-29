@@ -50,7 +50,7 @@ const StyledLogo = styled.img`
 `;
 
 const StyledLogoWithText = styled.img`
-  height: 32px;
+  height: 40px;
   width: 160px;
 `;
 

@@ -4671,8 +4671,8 @@ var StyledLink$1 = styled__default['default'](reactRouterDom.Link)(templateObjec
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, blink);
-var StyledLogo = styled__default['default'].img(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  width: 30px;\n  height: 30px;\n"], ["\n  width: 30px;\n  height: 30px;\n"])));
-var StyledLogoWithText = styled__default['default'].img(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  height: 30px;\n"], ["\n  height: 30px;\n"])));
+var StyledLogo = styled__default['default'].img(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  width: 32px;\n  height: 32px;\n"], ["\n  width: 32px;\n  height: 32px;\n"])));
+var StyledLogoWithText = styled__default['default'].img(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  height: 40px;\n  width: 160px;\n"], ["\n  height: 40px;\n  width: 160px;\n"])));
 var Logo = function (_a) {
     _a.isDark; var href = _a.href;
     var isAbsoluteUrl = href.startsWith("http");
