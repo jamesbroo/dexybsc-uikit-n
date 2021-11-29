@@ -44,12 +44,23 @@ const StyledLink = styled(Link)`
   }
 `;
 
+const StyledLogo = styled.img`
+  width: 32px;
+  height: 32px;
+`;
+
+const StyledLogoWithText = styled.img`
+  height: 32px;
+  width: 160px;
+`;
+
+
 const Logo: React.FC<Props> = ({ isDark, href }) => {
   const isAbsoluteUrl = href.startsWith("http");
   const innerLogo = (
     <>
-      <LogoIcon className="mobile-icon" />
-      <LogoWithTextIcon className="desktop-icon" isDark={isDark} />
+      <StyledLogo className="mobile-icon" src='/images/logo.png' />
+      <StyledLogoWithText className="desktop-icon" src='/images/logo-dark.png' />
     </>
   );
 

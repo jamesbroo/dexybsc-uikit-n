@@ -69,7 +69,7 @@ var getThemeValue = function (path, fallback) {
 
 var rotate$1 = keyframes(templateObject_1$1b || (templateObject_1$1b = __makeTemplateObject(["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"], ["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"])));
 var spinStyle = css(templateObject_2$z || (templateObject_2$z = __makeTemplateObject(["\n  animation: ", " 2s linear infinite;\n"], ["\n  animation: ", " 2s linear infinite;\n"])), rotate$1);
-var Svg = styled.svg(templateObject_3$e || (templateObject_3$e = __makeTemplateObject(["\n  align-self: center; // Safari fix\n  fill: ", ";\n  flex-shrink: 0;\n  ", "\n  ", "\n"], ["\n  align-self: center; // Safari fix\n  fill: ", ";\n  flex-shrink: 0;\n  ", "\n  ", "\n"])), function (_a) {
+var Svg = styled.svg(templateObject_3$f || (templateObject_3$f = __makeTemplateObject(["\n  align-self: center; // Safari fix\n  fill: ", ";\n  flex-shrink: 0;\n  ", "\n  ", "\n"], ["\n  align-self: center; // Safari fix\n  fill: ", ";\n  flex-shrink: 0;\n  ", "\n  ", "\n"])), function (_a) {
     var theme = _a.theme, color = _a.color;
     return getThemeValue("colors." + color, color)(theme);
 }, function (_a) {
@@ -82,7 +82,7 @@ Svg.defaultProps = {
     xmlns: "http://www.w3.org/2000/svg",
     spin: false,
 };
-var templateObject_1$1b, templateObject_2$z, templateObject_3$e;
+var templateObject_1$1b, templateObject_2$z, templateObject_3$f;
 
 var Icon$2g = function (props) {
     return (React__default.createElement(Svg, __assign({ viewBox: "0 0 24 24" }, props),
@@ -657,7 +657,7 @@ var Logo$2 = function (_a) {
     var isDark = _a.isDark, props = __rest(_a, ["isDark"]);
     return (React__default.createElement(Svg, __assign({ viewBox: "0 0 160 40" }, props), isDark ? React__default.createElement("image", { width: "160", height: "40", href: "images/logo-dark.png" }) : React__default.createElement("image", { width: "160", height: "32", href: "images/logo-light.png" })));
 };
-var LogoWithTextIcon = React__default.memo(Logo$2, function (prev, next) { return prev.isDark === next.isDark; });
+var LogoWithText = React__default.memo(Logo$2, function (prev, next) { return prev.isDark === next.isDark; });
 
 var Icon$1o = function (props) {
     return (React__default.createElement(Svg, __assign({ viewBox: "0 0 512 512" }, props),
@@ -1473,7 +1473,7 @@ var IconModule = /*#__PURE__*/Object.freeze({
     ListViewIcon: Icon$1r,
     LoginIcon: Icon$1q,
     LogoIcon: Icon$1p,
-    LogoWithTextIcon: LogoWithTextIcon,
+    LogoWithTextIcon: LogoWithText,
     LogoRoundIcon: Icon$1o,
     MathWalletIcon: Icon$1n,
     LogoutIcon: Icon$1m,
@@ -1632,8 +1632,8 @@ var Details = styled.div(templateObject_2$y || (templateObject_2$y = __makeTempl
     var hasHandler = _a.hasHandler;
     return (hasHandler ? withHandlerSpacing + "px" : "12px");
 });
-var CloseHandler = styled.div(templateObject_3$d || (templateObject_3$d = __makeTemplateObject(["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"], ["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"])));
-var StyledAlert = styled(Flex)(templateObject_4$a || (templateObject_4$a = __makeTemplateObject(["\n  position: relative;\n  background-color: ", ";\n  border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"], ["\n  position: relative;\n  background-color: ", ";\n  border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"])), function (_a) {
+var CloseHandler = styled.div(templateObject_3$e || (templateObject_3$e = __makeTemplateObject(["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"], ["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"])));
+var StyledAlert = styled(Flex)(templateObject_4$b || (templateObject_4$b = __makeTemplateObject(["\n  position: relative;\n  background-color: ", ";\n  border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"], ["\n  position: relative;\n  background-color: ", ";\n  border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"])), function (_a) {
     var theme = _a.theme;
     return theme.alert.background;
 });
@@ -1650,7 +1650,7 @@ var Alert = function (_a) {
             React__default.createElement(IconButton, { scale: "sm", variant: "text", onClick: onClick },
                 React__default.createElement(Icon$1K, { width: "24px", color: "currentColor" }))))));
 };
-var templateObject_1$14, templateObject_2$y, templateObject_3$d, templateObject_4$a;
+var templateObject_1$14, templateObject_2$y, templateObject_3$e, templateObject_4$b;
 
 var Grid = styled(Box)(templateObject_1$13 || (templateObject_1$13 = __makeTemplateObject(["\n  display: grid;\n  ", "\n  ", "\n"], ["\n  display: grid;\n  ", "\n  ", "\n"])), flexbox, grid);
 var templateObject_1$13;
@@ -1720,7 +1720,7 @@ var UnitContainer = styled(Text)(templateObject_2$x || (templateObject_2$x = __m
     var theme = _a.theme;
     return theme.colors.textSubtle;
 });
-var StyledBalanceInput = styled(Box)(templateObject_3$c || (templateObject_3$c = __makeTemplateObject(["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"], ["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"])), function (_a) {
+var StyledBalanceInput = styled(Box)(templateObject_3$d || (templateObject_3$d = __makeTemplateObject(["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"], ["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 16px;\n  box-shadow: ", ";\n  padding: 8px 16px;\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.input;
 }, function (_a) {
@@ -1730,14 +1730,14 @@ var StyledBalanceInput = styled(Box)(templateObject_3$c || (templateObject_3$c =
     var theme = _a.theme, isWarning = _a.isWarning;
     return theme.shadows[isWarning ? "warning" : "inset"];
 });
-var StyledInput$1 = styled(Input$1)(templateObject_4$9 || (templateObject_4$9 = __makeTemplateObject(["\n  background: transparent;\n  border-radius: 0;\n  box-shadow: none;\n  padding-left: 0;\n  padding-right: 0;\n  text-align: ", ";\n  border: none;\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  &:focus:not(:disabled) {\n    box-shadow: none;\n  }\n"], ["\n  background: transparent;\n  border-radius: 0;\n  box-shadow: none;\n  padding-left: 0;\n  padding-right: 0;\n  text-align: ", ";\n  border: none;\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  &:focus:not(:disabled) {\n    box-shadow: none;\n  }\n"])), function (_a) {
+var StyledInput$1 = styled(Input$1)(templateObject_4$a || (templateObject_4$a = __makeTemplateObject(["\n  background: transparent;\n  border-radius: 0;\n  box-shadow: none;\n  padding-left: 0;\n  padding-right: 0;\n  text-align: ", ";\n  border: none;\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  &:focus:not(:disabled) {\n    box-shadow: none;\n  }\n"], ["\n  background: transparent;\n  border-radius: 0;\n  box-shadow: none;\n  padding-left: 0;\n  padding-right: 0;\n  text-align: ", ";\n  border: none;\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  &:focus:not(:disabled) {\n    box-shadow: none;\n  }\n"])), function (_a) {
     var _b = _a.textAlign, textAlign = _b === void 0 ? "right" : _b;
     return textAlign;
 }, function (_a) {
     var theme = _a.theme;
     return theme.colors.textSubtle;
 });
-var templateObject_1$11, templateObject_2$x, templateObject_3$c, templateObject_4$9;
+var templateObject_1$11, templateObject_2$x, templateObject_3$d, templateObject_4$a;
 
 var BalanceInput = function (_a) {
     var value = _a.value, _b = _a.placeholder, placeholder = _b === void 0 ? "0.0" : _b, onUserInput = _a.onUserInput, currencyValue = _a.currencyValue, inputProps = _a.inputProps, innerRef = _a.innerRef, _c = _a.isWarning, isWarning = _c === void 0 ? false : _c, _d = _a.decimals, decimals = _d === void 0 ? 18 : _d, unit = _a.unit, switchEditingUnits = _a.switchEditingUnits, props = __rest(_a, ["value", "placeholder", "onUserInput", "currencyValue", "inputProps", "innerRef", "isWarning", "decimals", "unit", "switchEditingUnits"]);
@@ -1880,7 +1880,7 @@ var getBorderColor = function (_a) {
     }
     return theme.colors.cardBorder;
 };
-var StyledCard = styled.div(templateObject_3$b || (templateObject_3$b = __makeTemplateObject(["\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ", "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"], ["\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ",
+var StyledCard = styled.div(templateObject_3$c || (templateObject_3$c = __makeTemplateObject(["\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ", "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"], ["\n  background: ", ";\n  border-radius: ", ";\n  color: ", ";\n  overflow: hidden;\n  position: relative;\n\n  ",
     "\n\n  padding: 1px 1px 3px 1px;\n\n  ", "\n"])), getBorderColor, function (_a) {
     var theme = _a.theme;
     return theme.radii.card;
@@ -1891,7 +1891,7 @@ var StyledCard = styled.div(templateObject_3$b || (templateObject_3$b = __makeTe
     var isActive = _a.isActive;
     return isActive && css(templateObject_2$u || (templateObject_2$u = __makeTemplateObject(["\n      animation: ", " 3s ease infinite;\n      background-size: 400% 400%;\n    "], ["\n      animation: ", " 3s ease infinite;\n      background-size: 400% 400%;\n    "])), PromotedGradient);
 }, space);
-var StyledCardInner = styled(Box)(templateObject_4$8 || (templateObject_4$8 = __makeTemplateObject(["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  border-radius: ", ";\n"], ["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  border-radius: ", ";\n"])), function (_a) {
+var StyledCardInner = styled(Box)(templateObject_4$9 || (templateObject_4$9 = __makeTemplateObject(["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  border-radius: ", ";\n"], ["\n  width: 100%;\n  height: 100%;\n  overflow: ", ";\n  background: ", ";\n  border-radius: ", ";\n"])), function (_a) {
     var hasCustomBorder = _a.hasCustomBorder;
     return (hasCustomBorder ? "initial" : "inherit");
 }, function (_a) {
@@ -1907,7 +1907,7 @@ StyledCard.defaultProps = {
     isWarning: false,
     isDisabled: false,
 };
-var templateObject_1$Z, templateObject_2$u, templateObject_3$b, templateObject_4$8;
+var templateObject_1$Z, templateObject_2$u, templateObject_3$c, templateObject_4$9;
 
 var Card = function (_a) {
     var ribbon = _a.ribbon, children = _a.children, background = _a.background, props = __rest(_a, ["ribbon", "children", "background"]);
@@ -1981,14 +1981,14 @@ var variant = {
 
 var waves = keyframes(templateObject_1$U || (templateObject_1$U = __makeTemplateObject(["\n   from {\n        left: -150px;\n    }\n    to   {\n        left: 100%;\n    }\n"], ["\n   from {\n        left: -150px;\n    }\n    to   {\n        left: 100%;\n    }\n"])));
 var pulse = keyframes(templateObject_2$t || (templateObject_2$t = __makeTemplateObject(["\n  0% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.4;\n  }\n  100% {\n    opacity: 1;\n  }\n"], ["\n  0% {\n    opacity: 1;\n  }\n  50% {\n    opacity: 0.4;\n  }\n  100% {\n    opacity: 1;\n  }\n"])));
-var Root = styled.div(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  min-height: 20px;\n  display: block;\n  background-color: ", ";\n  border-radius: ", ";\n\n  ", "\n  ", "\n"], ["\n  min-height: 20px;\n  display: block;\n  background-color: ", ";\n  border-radius: ", ";\n\n  ", "\n  ", "\n"])), function (_a) {
+var Root = styled.div(templateObject_3$b || (templateObject_3$b = __makeTemplateObject(["\n  min-height: 20px;\n  display: block;\n  background-color: ", ";\n  border-radius: ", ";\n\n  ", "\n  ", "\n"], ["\n  min-height: 20px;\n  display: block;\n  background-color: ", ";\n  border-radius: ", ";\n\n  ", "\n  ", "\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.backgroundDisabled;
 }, function (_a) {
     var variant$1 = _a.variant, theme = _a.theme;
     return (variant$1 === variant.CIRCLE ? theme.radii.circle : theme.radii.small);
 }, layout, space);
-var Pulse = styled(Root)(templateObject_4$7 || (templateObject_4$7 = __makeTemplateObject(["\n  animation: ", " 2s infinite ease-out;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 2s infinite ease-out;\n  transform: translate3d(0, 0, 0);\n"])), pulse);
+var Pulse = styled(Root)(templateObject_4$8 || (templateObject_4$8 = __makeTemplateObject(["\n  animation: ", " 2s infinite ease-out;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 2s infinite ease-out;\n  transform: translate3d(0, 0, 0);\n"])), pulse);
 var Waves = styled(Root)(templateObject_5$4 || (templateObject_5$4 = __makeTemplateObject(["\n  position: relative;\n  overflow: hidden;\n  transform: translate3d(0, 0, 0);\n  &:before {\n    content: \"\";\n    position: absolute;\n    background-image: linear-gradient(90deg, transparent, rgba(243, 243, 243, 0.5), transparent);\n    top: 0;\n    left: -150px;\n    height: 100%;\n    width: 150px;\n    animation: ", " 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;\n  }\n"], ["\n  position: relative;\n  overflow: hidden;\n  transform: translate3d(0, 0, 0);\n  &:before {\n    content: \"\";\n    position: absolute;\n    background-image: linear-gradient(90deg, transparent, rgba(243, 243, 243, 0.5), transparent);\n    top: 0;\n    left: -150px;\n    height: 100%;\n    width: 150px;\n    animation: ", " 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;\n  }\n"])), waves);
 var Skeleton = function (_a) {
     var _b = _a.variant, variant$1 = _b === void 0 ? variant.RECT : _b, _c = _a.animation, animation$1 = _c === void 0 ? animation.PULSE : _c, props = __rest(_a, ["variant", "animation"]);
@@ -1997,7 +1997,7 @@ var Skeleton = function (_a) {
     }
     return React__default.createElement(Pulse, __assign({ variant: variant$1 }, props));
 };
-var templateObject_1$U, templateObject_2$t, templateObject_3$a, templateObject_4$7, templateObject_5$4;
+var templateObject_1$U, templateObject_2$t, templateObject_3$b, templateObject_4$8, templateObject_5$4;
 
 var PriceLink = styled.a(templateObject_1$T || (templateObject_1$T = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  svg {\n    transition: transform 0.3s;\n  }\n  :hover {\n    svg {\n      transform: scale(1.2);\n    }\n  }\n"])));
 var CakePrice = function (_a) {
@@ -2553,14 +2553,14 @@ var PancakeInput = styled.input(templateObject_2$m || (templateObject_2$m = __ma
     var theme = _a.theme;
     return theme.shadows.focus;
 }, getScale$2("travelDistance"), getScale$2("pancakeThickness"), getScale$2("pancakeThickness"));
-var PancakeLabel = styled.label(templateObject_3$9 || (templateObject_3$9 = __makeTemplateObject(["\n  width: ", ";\n  height: ", ";\n  background: ", ";\n  box-shadow: ", ";\n  display: inline-block;\n  border-radius: 50px;\n  position: relative;\n  transition: all 0.3s ease;\n  transform-origin: 20% center;\n  cursor: pointer;\n"], ["\n  width: ", ";\n  height: ", ";\n  background: ", ";\n  box-shadow: ", ";\n  display: inline-block;\n  border-radius: 50px;\n  position: relative;\n  transition: all 0.3s ease;\n  transform-origin: 20% center;\n  cursor: pointer;\n"])), getScale$2("toggleWidth"), getScale$2("toggleHeight"), function (_a) {
+var PancakeLabel = styled.label(templateObject_3$a || (templateObject_3$a = __makeTemplateObject(["\n  width: ", ";\n  height: ", ";\n  background: ", ";\n  box-shadow: ", ";\n  display: inline-block;\n  border-radius: 50px;\n  position: relative;\n  transition: all 0.3s ease;\n  transform-origin: 20% center;\n  cursor: pointer;\n"], ["\n  width: ", ";\n  height: ", ";\n  background: ", ";\n  box-shadow: ", ";\n  display: inline-block;\n  border-radius: 50px;\n  position: relative;\n  transition: all 0.3s ease;\n  transform-origin: 20% center;\n  cursor: pointer;\n"])), getScale$2("toggleWidth"), getScale$2("toggleHeight"), function (_a) {
     var theme = _a.theme, checked = _a.checked;
     return theme.colors[checked ? "success" : "input"];
 }, function (_a) {
     var theme = _a.theme;
     return theme.shadows.inset;
 });
-var templateObject_1$A, templateObject_2$m, templateObject_3$9;
+var templateObject_1$A, templateObject_2$m, templateObject_3$a;
 
 var PancakeToggle = function (_a) {
     var checked = _a.checked, _b = _a.scale, scale = _b === void 0 ? scales$4.LG : _b, props = __rest(_a, ["checked", "scale"]);
@@ -2895,11 +2895,11 @@ var SliderLabel = styled(Text)(templateObject_2$k || (templateObject_2$k = __mak
     var progress = _a.progress;
     return progress;
 });
-var BunnyButt = styled.div(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  background: url(", ") no-repeat;\n  height: 32px;\n  filter: ", ";\n  position: absolute;\n  width: 15px;\n"], ["\n  background: url(", ") no-repeat;\n  height: 32px;\n  filter: ", ";\n  position: absolute;\n  width: 15px;\n"])), bunnyButt, function (_a) {
+var BunnyButt = styled.div(templateObject_3$9 || (templateObject_3$9 = __makeTemplateObject(["\n  background: url(", ") no-repeat;\n  height: 32px;\n  filter: ", ";\n  position: absolute;\n  width: 15px;\n"], ["\n  background: url(", ") no-repeat;\n  height: 32px;\n  filter: ", ";\n  position: absolute;\n  width: 15px;\n"])), bunnyButt, function (_a) {
     var disabled = _a.disabled;
     return (disabled ? "grayscale(100%)" : "none");
 });
-var BunnySlider = styled.div(templateObject_4$6 || (templateObject_4$6 = __makeTemplateObject(["\n  position: absolute;\n  left: 14px;\n  width: calc(100% - 14px);\n"], ["\n  position: absolute;\n  left: 14px;\n  width: calc(100% - 14px);\n"])));
+var BunnySlider = styled.div(templateObject_4$7 || (templateObject_4$7 = __makeTemplateObject(["\n  position: absolute;\n  left: 14px;\n  width: calc(100% - 14px);\n"], ["\n  position: absolute;\n  left: 14px;\n  width: calc(100% - 14px);\n"])));
 var StyledInput = styled.input(templateObject_5$3 || (templateObject_5$3 = __makeTemplateObject(["\n  cursor: ", ";\n  height: 32px;\n  position: relative;\n\n  ::-webkit-slider-thumb {\n    ", "\n  }\n\n  ::-moz-range-thumb {\n    ", "\n  }\n\n  ::-ms-thumb {\n    ", "\n  }\n"], ["\n  cursor: ", ";\n  height: 32px;\n  position: relative;\n\n  ::-webkit-slider-thumb {\n    ", "\n  }\n\n  ::-moz-range-thumb {\n    ", "\n  }\n\n  ::-ms-thumb {\n    ", "\n  }\n"])), getCursorStyle, getBaseThumbStyles, getBaseThumbStyles, getBaseThumbStyles);
 var BarBackground = styled.div(templateObject_6$1 || (templateObject_6$1 = __makeTemplateObject(["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"], ["\n  background-color: ", ";\n  height: 2px;\n  position: absolute;\n  top: 18px;\n  width: 100%;\n"])), function (_a) {
     var theme = _a.theme, disabled = _a.disabled;
@@ -2912,7 +2912,7 @@ var BarProgress = styled.div(templateObject_7$1 || (templateObject_7$1 = __makeT
     var disabled = _a.disabled;
     return (disabled ? "grayscale(100%)" : "none");
 });
-var templateObject_1$w, templateObject_2$k, templateObject_3$8, templateObject_4$6, templateObject_5$3, templateObject_6$1, templateObject_7$1;
+var templateObject_1$w, templateObject_2$k, templateObject_3$9, templateObject_4$7, templateObject_5$3, templateObject_6$1, templateObject_7$1;
 
 var Slider = function (_a) {
     var name = _a.name, min = _a.min, max = _a.max, value = _a.value, onValueChanged = _a.onValueChanged, valueLabel = _a.valueLabel, _b = _a.step, step = _b === void 0 ? "any" : _b, _c = _a.disabled, disabled = _c === void 0 ? false : _c, props = __rest(_a, ["name", "min", "max", "value", "onValueChanged", "valueLabel", "step", "disabled"]);
@@ -2969,15 +2969,15 @@ var Icon = function (props) {
 
 var rotate = keyframes(templateObject_1$v || (templateObject_1$v = __makeTemplateObject(["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"], ["\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n"])));
 var float = keyframes(templateObject_2$j || (templateObject_2$j = __makeTemplateObject(["\n\t0% {\n\t\ttransform: translatey(0px);\n\t}\n\t50% {\n\t\ttransform: translatey(10px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t}\n"], ["\n\t0% {\n\t\ttransform: translatey(0px);\n\t}\n\t50% {\n\t\ttransform: translatey(10px);\n\t}\n\t100% {\n\t\ttransform: translatey(0px);\n\t}\n"])));
-var Container = styled.div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  position: relative;\n"], ["\n  position: relative;\n"])));
-var RotatingPancakeIcon = styled(Icon)(templateObject_4$5 || (templateObject_4$5 = __makeTemplateObject(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate);
+var Container = styled.div(templateObject_3$8 || (templateObject_3$8 = __makeTemplateObject(["\n  position: relative;\n"], ["\n  position: relative;\n"])));
+var RotatingPancakeIcon = styled(Icon)(templateObject_4$6 || (templateObject_4$6 = __makeTemplateObject(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: absolute;\n  top: 0;\n  left: 0;\n  animation: ", " 2s linear infinite;\n  transform: translate3d(0, 0, 0);\n"])), rotate);
 styled(Icon$1)(templateObject_5$2 || (templateObject_5$2 = __makeTemplateObject(["\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"], ["\n  animation: ", " 6s ease-in-out infinite;\n  transform: translate3d(0, 0, 0);\n"])), float);
 var Spinner = function (_a) {
     var _b = _a.size, size = _b === void 0 ? 128 : _b;
     return (React__default.createElement(Container, null,
         React__default.createElement(RotatingPancakeIcon, { width: size * 0.5 + "px" })));
 };
-var templateObject_1$v, templateObject_2$j, templateObject_3$7, templateObject_4$5, templateObject_5$2;
+var templateObject_1$v, templateObject_2$j, templateObject_3$8, templateObject_4$6, templateObject_5$2;
 
 var StepperWrapper = styled.div(templateObject_1$u || (templateObject_1$u = __makeTemplateObject(["\n  display: flex;\n  flex-direction: column;\n  width: fit-content;\n"], ["\n  display: flex;\n  flex-direction: column;\n  width: fit-content;\n"])));
 var Stepper = function (_a) {
@@ -3019,14 +3019,14 @@ var Connector = styled.div(templateObject_2$i || (templateObject_2$i = __makeTem
     var theme = _a.theme, status = _a.status;
     return theme.colors[status === "past" || status === "current" ? "success" : "textDisabled"];
 });
-var ChildrenWrapper = styled(Box)(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  ", " {\n    visibility: ", ";\n  }\n"], ["\n  ", " {\n    visibility: ", ";\n  }\n"])), function (_a) {
+var ChildrenWrapper = styled(Box)(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  ", " {\n    visibility: ", ";\n  }\n"], ["\n  ", " {\n    visibility: ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.md;
 }, function (_a) {
     var isVisible = _a.isVisible;
     return (isVisible ? "visible" : "hidden");
 });
-var ChildrenLeftWrapper = styled(ChildrenWrapper)(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  display: none;\n  ", " {\n    display: block;\n    margin-right: 16px;\n  }\n"], ["\n  display: none;\n  ", " {\n    display: block;\n    margin-right: 16px;\n  }\n"])), function (_a) {
+var ChildrenLeftWrapper = styled(ChildrenWrapper)(templateObject_4$5 || (templateObject_4$5 = __makeTemplateObject(["\n  display: none;\n  ", " {\n    display: block;\n    margin-right: 16px;\n  }\n"], ["\n  display: none;\n  ", " {\n    display: block;\n    margin-right: 16px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.md;
 });
@@ -3065,7 +3065,7 @@ var Step = function (_a) {
             !isFirst && !isLast && React__default.createElement(Connector, { "$isFirstStep": isFirst, "$isLastStep": isLast, status: statusSecondPart })),
         React__default.createElement(ChildrenRightWrapper, { isVisible: isIndexPair }, children)));
 };
-var templateObject_1$t, templateObject_2$i, templateObject_3$6, templateObject_4$4, templateObject_5$1, templateObject_6, templateObject_7;
+var templateObject_1$t, templateObject_2$i, templateObject_3$7, templateObject_4$5, templateObject_5$1, templateObject_6, templateObject_7;
 
 var InlineMenuContainer = styled(Box)(templateObject_1$s || (templateObject_1$s = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: ", ";\n  box-shadow: ", ";\n"], ["\n  background-color: ", ";\n  border-radius: ", ";\n  box-shadow: ", ";\n"])), function (_a) {
     var theme = _a.theme;
@@ -3087,15 +3087,15 @@ var SubMenuContainer = styled(Flex)(templateObject_2$h || (templateObject_2$h = 
     var theme = _a.theme;
     return "1px solid " + theme.colors.inputSecondary;
 });
-var ClickableElementContainer = styled.div(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  cursor: pointer;\n  display: inline-flex;\n"], ["\n  cursor: pointer;\n  display: inline-flex;\n"])));
-var SubMenuItem = styled.button(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  border: 0;\n  outline: 0;\n  cursor: pointer;\n  background: transparent;\n  padding: 8px 16px;\n  color: ", ";\n  width: 100%;\n  font-size: 16px;\n  text-align: left;\n\n  &:hover {\n    background-color: ", ";\n    text-decoration: none;\n  }\n"], ["\n  border: 0;\n  outline: 0;\n  cursor: pointer;\n  background: transparent;\n  padding: 8px 16px;\n  color: ", ";\n  width: 100%;\n  font-size: 16px;\n  text-align: left;\n\n  &:hover {\n    background-color: ", ";\n    text-decoration: none;\n  }\n"])), function (_a) {
+var ClickableElementContainer = styled.div(templateObject_3$6 || (templateObject_3$6 = __makeTemplateObject(["\n  cursor: pointer;\n  display: inline-flex;\n"], ["\n  cursor: pointer;\n  display: inline-flex;\n"])));
+var SubMenuItem = styled.button(templateObject_4$4 || (templateObject_4$4 = __makeTemplateObject(["\n  border: 0;\n  outline: 0;\n  cursor: pointer;\n  background: transparent;\n  padding: 8px 16px;\n  color: ", ";\n  width: 100%;\n  font-size: 16px;\n  text-align: left;\n\n  &:hover {\n    background-color: ", ";\n    text-decoration: none;\n  }\n"], ["\n  border: 0;\n  outline: 0;\n  cursor: pointer;\n  background: transparent;\n  padding: 8px 16px;\n  color: ", ";\n  width: 100%;\n  font-size: 16px;\n  text-align: left;\n\n  &:hover {\n    background-color: ", ";\n    text-decoration: none;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.text;
 }, function (_a) {
     var theme = _a.theme;
     return theme.colors.inputSecondary;
 });
-var templateObject_1$s, templateObject_2$h, templateObject_3$5, templateObject_4$3;
+var templateObject_1$s, templateObject_2$h, templateObject_3$6, templateObject_4$4;
 
 var portalRoot$1 = document.getElementById("portal-root");
 var BaseMenu = function (_a) {
@@ -3630,7 +3630,7 @@ var Input = styled.input(templateObject_2$e || (templateObject_2$e = __makeTempl
     var theme = _a.theme;
     return theme.shadows.focus;
 });
-var StyledToggle = styled.div(templateObject_3$4 || (templateObject_3$4 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border-radius: 24px;\n  box-shadow: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  height: ", ";\n  position: relative;\n  transition: background-color 200ms;\n  width: ", ";\n"], ["\n  align-items: center;\n  background-color: ",
+var StyledToggle = styled.div(templateObject_3$5 || (templateObject_3$5 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  border-radius: 24px;\n  box-shadow: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  height: ", ";\n  position: relative;\n  transition: background-color 200ms;\n  width: ", ";\n"], ["\n  align-items: center;\n  background-color: ",
     ";\n  border-radius: 24px;\n  box-shadow: ", ";\n  cursor: pointer;\n  display: inline-flex;\n  height: ", ";\n  position: relative;\n  transition: background-color 200ms;\n  width: ", ";\n"])), function (_a) {
     var theme = _a.theme, $checked = _a.$checked, $checkedColor = _a.$checkedColor, $defaultColor = _a.$defaultColor;
     return theme.colors[$checked ? $checkedColor : $defaultColor];
@@ -3638,7 +3638,7 @@ var StyledToggle = styled.div(templateObject_3$4 || (templateObject_3$4 = __make
     var theme = _a.theme;
     return theme.shadows.inset;
 }, getScale("toggleHeight"), getScale("toggleWidth"));
-var templateObject_1$n, templateObject_2$e, templateObject_3$4;
+var templateObject_1$n, templateObject_2$e, templateObject_3$5;
 
 var Toggle = function (_a) {
     var checked = _a.checked, _b = _a.defaultColor, defaultColor = _b === void 0 ? "input" : _b, _c = _a.checkedColor, checkedColor = _c === void 0 ? "success" : _c, _d = _a.scale, scale = _d === void 0 ? scales$1.LG : _d, startIcon = _a.startIcon, endIcon = _a.endIcon, props = __rest(_a, ["checked", "defaultColor", "checkedColor", "scale", "startIcon", "endIcon"]);
@@ -4223,7 +4223,7 @@ var ModalHeader = styled.div(templateObject_1$h || (templateObject_1$h = __makeT
     return theme.colors.cardBorder;
 });
 var ModalTitle = styled(Flex)(templateObject_2$a || (templateObject_2$a = __makeTemplateObject(["\n  align-items: center;\n  flex: 1;\n"], ["\n  align-items: center;\n  flex: 1;\n"])));
-var ModalBody = styled(Flex)(templateObject_3$3 || (templateObject_3$3 = __makeTemplateObject(["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n"], ["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n"])));
+var ModalBody = styled(Flex)(templateObject_3$4 || (templateObject_3$4 = __makeTemplateObject(["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n"], ["\n  flex-direction: column;\n  max-height: 90vh;\n  overflow-y: auto;\n"])));
 var ModalCloseButton = function (_a) {
     var onDismiss = _a.onDismiss;
     return (React__default.createElement(IconButton, { variant: "text", onClick: onDismiss, "aria-label": "Close the dialog" },
@@ -4234,7 +4234,7 @@ var ModalBackButton = function (_a) {
     return (React__default.createElement(IconButton, { variant: "text", onClick: onBack, "area-label": "go back", mr: "8px" },
         React__default.createElement(Icon$29, { color: "primary" })));
 };
-var ModalContainer = styled(Box)(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(165, 127, 57, 0.1), 0px 1px 1px rgba(165, 127, 57, 0.05);\n  border: 2px solid  rgba(165, 127, 57);\n  border-radius: 10px;\n  width: 100%;\n  max-height: 100vh;\n  z-index: ", ";\n\n  ", " {\n    width: auto;\n    min-width: ", ";\n    max-width: 100%;\n  }\n"], ["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(165, 127, 57, 0.1), 0px 1px 1px rgba(165, 127, 57, 0.05);\n  border: 2px solid  rgba(165, 127, 57);\n  border-radius: 10px;\n  width: 100%;\n  max-height: 100vh;\n  z-index: ", ";\n\n  ", " {\n    width: auto;\n    min-width: ", ";\n    max-width: 100%;\n  }\n"])), function (_a) {
+var ModalContainer = styled(Box)(templateObject_4$3 || (templateObject_4$3 = __makeTemplateObject(["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(165, 127, 57, 0.1), 0px 1px 1px rgba(165, 127, 57, 0.05);\n  border: 2px solid  rgba(165, 127, 57);\n  border-radius: 10px;\n  width: 100%;\n  max-height: 100vh;\n  z-index: ", ";\n\n  ", " {\n    width: auto;\n    min-width: ", ";\n    max-width: 100%;\n  }\n"], ["\n  overflow: hidden;\n  background: ", ";\n  box-shadow: 0px 20px 36px -8px rgba(165, 127, 57, 0.1), 0px 1px 1px rgba(165, 127, 57, 0.05);\n  border: 2px solid  rgba(165, 127, 57);\n  border-radius: 10px;\n  width: 100%;\n  max-height: 100vh;\n  z-index: ", ";\n\n  ", " {\n    width: auto;\n    min-width: ", ";\n    max-width: 100%;\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.modal.background;
 }, function (_a) {
@@ -4247,7 +4247,7 @@ var ModalContainer = styled(Box)(templateObject_4$2 || (templateObject_4$2 = __m
     var minWidth = _a.minWidth;
     return minWidth;
 });
-var templateObject_1$h, templateObject_2$a, templateObject_3$3, templateObject_4$2;
+var templateObject_1$h, templateObject_2$a, templateObject_3$4, templateObject_4$3;
 
 var Modal = function (_a) {
     var title = _a.title, onDismiss = _a.onDismiss, onBack = _a.onBack, children = _a.children, _b = _a.hideCloseButton, hideCloseButton = _b === void 0 ? false : _b, _c = _a.bodyPadding, bodyPadding = _c === void 0 ? "24px" : _c, _d = _a.headerBackground, headerBackground = _d === void 0 ? "transparent" : _d, _e = _a.minWidth, minWidth = _e === void 0 ? "320px" : _e, props = __rest(_a, ["title", "onDismiss", "onBack", "children", "hideCloseButton", "bodyPadding", "headerBackground", "minWidth"]);
@@ -4440,11 +4440,11 @@ var DropdownMenuItem = styled.button(templateObject_1$c || (templateObject_1$c =
     return theme.colors.tertiary;
 });
 var StyledDropdownMenuItemContainer = styled.div(templateObject_2$6 || (templateObject_2$6 = __makeTemplateObject(["\n  &:first-child > ", " {\n    border-top-left-radius: 8px;\n    border-top-right-radius: 8px;\n  }\n\n  &:last-child > ", " {\n    border-bottom-left-radius: 8px;\n    border-bottom-right-radius: 8px;\n  }\n"], ["\n  &:first-child > ", " {\n    border-top-left-radius: 8px;\n    border-top-right-radius: 8px;\n  }\n\n  &:last-child > ", " {\n    border-bottom-left-radius: 8px;\n    border-bottom-right-radius: 8px;\n  }\n"])), DropdownMenuItem, DropdownMenuItem);
-var DropdownMenuDivider = styled.hr(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  border-color: ", ";\n  border-style: solid;\n  border-width: 1px 0 0;\n  margin: 4px 0;\n"], ["\n  border-color: ", ";\n  border-style: solid;\n  border-width: 1px 0 0;\n  margin: 4px 0;\n"])), function (_a) {
+var DropdownMenuDivider = styled.hr(templateObject_3$3 || (templateObject_3$3 = __makeTemplateObject(["\n  border-color: ", ";\n  border-style: solid;\n  border-width: 1px 0 0;\n  margin: 4px 0;\n"], ["\n  border-color: ", ";\n  border-style: solid;\n  border-width: 1px 0 0;\n  margin: 4px 0;\n"])), function (_a) {
     var theme = _a.theme;
     return theme.colors.cardBorder;
 });
-var StyledDropdownMenu = styled.div(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 16px;\n  padding-bottom: 4px;\n  padding-top: 4px;\n  pointer-events: auto;\n  width: ", ";\n  visibility: visible;\n  z-index: 1001;\n\n  ", "\n"], ["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 16px;\n  padding-bottom: 4px;\n  padding-top: 4px;\n  pointer-events: auto;\n  width: ", ";\n  visibility: visible;\n  z-index: 1001;\n\n  ",
+var StyledDropdownMenu = styled.div(templateObject_4$2 || (templateObject_4$2 = __makeTemplateObject(["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 16px;\n  padding-bottom: 4px;\n  padding-top: 4px;\n  pointer-events: auto;\n  width: ", ";\n  visibility: visible;\n  z-index: 1001;\n\n  ", "\n"], ["\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 16px;\n  padding-bottom: 4px;\n  padding-top: 4px;\n  pointer-events: auto;\n  width: ", ";\n  visibility: visible;\n  z-index: 1001;\n\n  ",
     "\n"])), function (_a) {
     var theme = _a.theme;
     return theme.card.background;
@@ -4469,7 +4469,7 @@ var LinkStatus = styled(Text)(templateObject_5 || (templateObject_5 = __makeTemp
     var theme = _a.theme, color = _a.color;
     return theme.colors[color];
 });
-var templateObject_1$c, templateObject_2$6, templateObject_3$2, templateObject_4$1, templateObject_5;
+var templateObject_1$c, templateObject_2$6, templateObject_3$3, templateObject_4$2, templateObject_5;
 
 var DropdownMenuItemType;
 (function (DropdownMenuItemType) {
@@ -4637,16 +4637,18 @@ var StyledLink$1 = styled(Link$1)(templateObject_2$5 || (templateObject_2$5 = __
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, blink);
+var StyledLogo = styled.img(templateObject_3$2 || (templateObject_3$2 = __makeTemplateObject(["\n  width: 30px;\n  height: 30px;\n"], ["\n  width: 30px;\n  height: 30px;\n"])));
+var StyledLogoWithText = styled.img(templateObject_4$1 || (templateObject_4$1 = __makeTemplateObject(["\n  height: 30px;\n"], ["\n  height: 30px;\n"])));
 var Logo = function (_a) {
-    var isDark = _a.isDark, href = _a.href;
+    _a.isDark; var href = _a.href;
     var isAbsoluteUrl = href.startsWith("http");
     var innerLogo = (React__default.createElement(React__default.Fragment, null,
-        React__default.createElement(Icon$1p, { className: "mobile-icon" }),
-        React__default.createElement(LogoWithTextIcon, { className: "desktop-icon", isDark: isDark })));
+        React__default.createElement(StyledLogo, { className: "mobile-icon", src: '/images/logo.png' }),
+        React__default.createElement(StyledLogoWithText, { className: "desktop-icon", src: '/images/logo-dark.png' })));
     return (React__default.createElement(Flex, null, isAbsoluteUrl ? (React__default.createElement(StyledLink$1, { as: "a", href: href, "aria-label": "Pancake home page" }, innerLogo)) : (React__default.createElement(StyledLink$1, { to: href, "aria-label": "Pancake home page" }, innerLogo))));
 };
 var Logo$1 = React__default.memo(Logo, function (prev, next) { return prev.isDark === next.isDark; });
-var templateObject_1$b, templateObject_2$5;
+var templateObject_1$b, templateObject_2$5, templateObject_3$2, templateObject_4$1;
 
 var status = {
     LIVE: {
@@ -5308,4 +5310,4 @@ var ResetCSS = createGlobalStyle(templateObject_1 || (templateObject_1 = __makeT
 });
 var templateObject_1;
 
-export { Icon$2b as AccountFilledIcon, Icon$2c as AccountIcon, Icon$2a as AddIcon, Alert, Icon$29 as ArrowBackIcon, Icon$28 as ArrowDownIcon, Icon$27 as ArrowDropDownIcon, Icon$26 as ArrowDropUpIcon, Icon$25 as ArrowFirstIcon, Icon$24 as ArrowForwardIcon, Icon$23 as ArrowLastIcon, Icon$22 as ArrowUpIcon, Icon$21 as AutoRenewIcon, Icon$2 as AvalancheIcon, BackgroundImage, BalanceInput, GridLayout$1 as BaseLayout, BaseMenu, Icon$1$ as BinanceChainIcon, Icon$20 as BinanceIcon, Icon$2e as BlockIcon, Icon$1_ as BnbUsdtPairTokenIcon, Box, Breadcrumbs, Icon$1Z as BscScanIcon, Icon$1Y as BunnyCardsIcon, Icon$1X as BunnyPlaceholderIcon, Button, ButtonMenu$1 as ButtonMenu, ButtonMenuItem, CakePrice$1 as CakePrice, Icon$1T as CalculateIcon, Icon$1W as CameraIcon, Card, CardBody, CardFooter, CardHeader, CardRibbon, Icon$1U as CardViewIcon, Icon$1V as Cards, GridLayout as CardsLayout, Icon$1R as ChartIcon, Checkbox, Icon$1P as CheckmarkCircleFillIcon, Icon$2g as CheckmarkCircleIcon, Icon$1Q as CheckmarkIcon, Icon$1O as ChevronDownIcon, Icon$1N as ChevronLeftIcon, Icon$1M as ChevronRightIcon, Icon$1L as ChevronUpIcon, Icon$1S as CircleOutlineIcon, ClickableElementContainer, Icon$1K as CloseIcon, Icon$1J as CogIcon, Icon$1I as Coin98Icon, Icon$1G as CommunityFilledIcon, Icon$1H as CommunityIcon, ConnectorNames, Icon$1F as CopyIcon, Icon$1E as CrownIcon, Icon$1D as CurrencyIcon, Dropdown, DropdownMenuItemType, Icon$7 as EarnFillIcon, Icon$1B as EarnFilledIcon, Icon$1C as EarnIcon, Icon$1A as EllipsisIcon, Icon$2f as ErrorIcon, Icon$4 as ExpandIcon, ExpandableButton, ExpandableLabel, FallingBunnies, Icon$j as FarmIcon, Flex, Icon$1y as GithubIcon, Grid, Icon$i as GroupsIcon, Icon$g as HamburgerCloseIcon, Icon$h as HamburgerIcon, Heading, Icon$1x as HelpIcon, Icon$1w as HistoryIcon, Icon$f as HomeIcon, IconButton, Icon$e as IfoIcon, Image, Icon$2d as InfoIcon, InlineMenu, InlineMenuContainer, Input$1 as Input, InputGroup, Icon$1z as InstagramIcon, Icon$1u as LanguageCurrencyIcon, Icon$1v as LanguageIcon, Icon$1t as LaurelLeftIcon, Icon$1s as LaurelRightIcon, Link, LinkExternal, Icon$1r as ListViewIcon, Icon$1q as LoginIcon, Icon$1p as LogoIcon, Icon$1o as LogoRoundIcon, LogoWithTextIcon, Icon$1m as LogoutIcon, Icon$1n as MathWalletIcon, Icon$1l as MedalBronzeIcon, Icon$1k as MedalGoldIcon, Icon$1j as MedalPurpleIcon, Icon$1i as MedalSilverIcon, Icon$1h as MedalTealIcon, Menu$1 as Menu, Message, Icon$1g as MetamaskIcon, Icon$1f as MinusIcon, Modal, ModalBackButton, ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalProvider, ModalTitle, Icon$d as MoonIcon, Icon$1e as MoreHorizontalIcon, Icon$c as MoreIcon, Icon$1d as MoreVerticalIcon, Icon$b as NftFillIcon, Icon$1b as NftFilledIcon, Icon$1c as NftIcon, Icon$1a as NoProfileAvatarIcon, NotificationDot, Icon$19 as OpenNewIcon, Overlay, Icon$16 as PancakeRoundIcon, PancakeToggle, Icon$18 as PancakesIcon, Icon$17 as PencilIcon, Icon$14 as PlayCircleOutlineIcon, Icon$15 as PocketWatchIcon, Icon$a as PoolIcon, Icon$13 as PredictionsIcon, Icon$Z as PresentCheckIcon, Icon$X as PresentNoneIcon, Icon$Y as PresentWonIcon, Icon$12 as PrizeIcon, ProfileAvatar, Progress, Icon$_ as ProgressBunny, Icon$11 as ProposalIcon, Radio, Icon$W as RedditIcon, Icon$V as RefreshIcon, Icon$10 as RemoveIcon, ResetCSS, Icon$T as ResourcesFilledIcon, Icon$U as ResourcesIcon, Icon$S as SafePalIcon, Icon$R as SearchIcon, Icon$Q as SellIcon, Icon$P as ShareIcon, Icon$3 as ShrinkIcon, Skeleton, Slider, Icon$O as SmallDotIcon, Spinner, Icon$N as StarFillIcon, Icon$M as StarLineIcon, Step, Stepper, SubMenu, SubMenuContainer, SubMenuItem, SubMenuItems, Icon$9 as SunIcon, Svg, Icon$K as SwapFillIcon, Icon$L as SwapIcon, Icon$J as SwapVertIcon, Icon$I as SyncAltIcon, Tab, ButtonMenu as TabMenu, Table, Tag, Td, Icon$8 as TeamBattleIcon, Icon$H as TeamPlayerIcon, Icon$G as TelegramIcon, Icon$F as TestnetIcon, Text, Textfield as TextField, Th, ThemeSwitcher$1 as ThemeSwitcher, Icon$E as Ticket, Icon$D as TicketFillIcon, Icon$E as TicketIcon, Icon$C as TicketRound, Timeline, Icon$B as TimerIcon, Toggle, TokenImage, TokenPairImage, Icon$A as TokenPocketIcon, TooltipText, Icon$y as TradeFilledIcon, Icon$z as TradeIcon, Icon$5 as TrophyFillIcon, Icon$x as TrophyGoldIcon, Icon$6 as TrophyIcon, Icon$w as TrustWalletIcon, Icon$u as TuneIcon, Icon$v as TwitterIcon, UserMenu, UserMenuDivider, UserMenuItem, Icon$$ as VerifiedIcon, Icon$t as VisibilityOff, Icon$s as VisibilityOn, Icon$r as VolumeOffIcon, Icon$q as VolumeUpIcon, Icon$p as VoteIcon, Icon$k as WaitIcon, Icon$n as WalletConnectIcon, Icon$l as WalletFilledIcon, Icon$m as WalletIcon, Icon$o as WarningIcon, variants$5 as alertVariants, byTextAscending, byTextDescending, connectorLocalStorageKey, darkTheme as dark, darkColors, lightTheme as light, lightColors, makeRender, links as menuConfig, status as menuStatus, useKonamiCheatCode, useMatchBreakpoints, useModal, useParticleBurst, useTable, useTooltip, useWalletModal };
+export { Icon$2b as AccountFilledIcon, Icon$2c as AccountIcon, Icon$2a as AddIcon, Alert, Icon$29 as ArrowBackIcon, Icon$28 as ArrowDownIcon, Icon$27 as ArrowDropDownIcon, Icon$26 as ArrowDropUpIcon, Icon$25 as ArrowFirstIcon, Icon$24 as ArrowForwardIcon, Icon$23 as ArrowLastIcon, Icon$22 as ArrowUpIcon, Icon$21 as AutoRenewIcon, Icon$2 as AvalancheIcon, BackgroundImage, BalanceInput, GridLayout$1 as BaseLayout, BaseMenu, Icon$1$ as BinanceChainIcon, Icon$20 as BinanceIcon, Icon$2e as BlockIcon, Icon$1_ as BnbUsdtPairTokenIcon, Box, Breadcrumbs, Icon$1Z as BscScanIcon, Icon$1Y as BunnyCardsIcon, Icon$1X as BunnyPlaceholderIcon, Button, ButtonMenu$1 as ButtonMenu, ButtonMenuItem, CakePrice$1 as CakePrice, Icon$1T as CalculateIcon, Icon$1W as CameraIcon, Card, CardBody, CardFooter, CardHeader, CardRibbon, Icon$1U as CardViewIcon, Icon$1V as Cards, GridLayout as CardsLayout, Icon$1R as ChartIcon, Checkbox, Icon$1P as CheckmarkCircleFillIcon, Icon$2g as CheckmarkCircleIcon, Icon$1Q as CheckmarkIcon, Icon$1O as ChevronDownIcon, Icon$1N as ChevronLeftIcon, Icon$1M as ChevronRightIcon, Icon$1L as ChevronUpIcon, Icon$1S as CircleOutlineIcon, ClickableElementContainer, Icon$1K as CloseIcon, Icon$1J as CogIcon, Icon$1I as Coin98Icon, Icon$1G as CommunityFilledIcon, Icon$1H as CommunityIcon, ConnectorNames, Icon$1F as CopyIcon, Icon$1E as CrownIcon, Icon$1D as CurrencyIcon, Dropdown, DropdownMenuItemType, Icon$7 as EarnFillIcon, Icon$1B as EarnFilledIcon, Icon$1C as EarnIcon, Icon$1A as EllipsisIcon, Icon$2f as ErrorIcon, Icon$4 as ExpandIcon, ExpandableButton, ExpandableLabel, FallingBunnies, Icon$j as FarmIcon, Flex, Icon$1y as GithubIcon, Grid, Icon$i as GroupsIcon, Icon$g as HamburgerCloseIcon, Icon$h as HamburgerIcon, Heading, Icon$1x as HelpIcon, Icon$1w as HistoryIcon, Icon$f as HomeIcon, IconButton, Icon$e as IfoIcon, Image, Icon$2d as InfoIcon, InlineMenu, InlineMenuContainer, Input$1 as Input, InputGroup, Icon$1z as InstagramIcon, Icon$1u as LanguageCurrencyIcon, Icon$1v as LanguageIcon, Icon$1t as LaurelLeftIcon, Icon$1s as LaurelRightIcon, Link, LinkExternal, Icon$1r as ListViewIcon, Icon$1q as LoginIcon, Icon$1p as LogoIcon, Icon$1o as LogoRoundIcon, LogoWithText as LogoWithTextIcon, Icon$1m as LogoutIcon, Icon$1n as MathWalletIcon, Icon$1l as MedalBronzeIcon, Icon$1k as MedalGoldIcon, Icon$1j as MedalPurpleIcon, Icon$1i as MedalSilverIcon, Icon$1h as MedalTealIcon, Menu$1 as Menu, Message, Icon$1g as MetamaskIcon, Icon$1f as MinusIcon, Modal, ModalBackButton, ModalBody, ModalCloseButton, ModalContainer, ModalHeader, ModalProvider, ModalTitle, Icon$d as MoonIcon, Icon$1e as MoreHorizontalIcon, Icon$c as MoreIcon, Icon$1d as MoreVerticalIcon, Icon$b as NftFillIcon, Icon$1b as NftFilledIcon, Icon$1c as NftIcon, Icon$1a as NoProfileAvatarIcon, NotificationDot, Icon$19 as OpenNewIcon, Overlay, Icon$16 as PancakeRoundIcon, PancakeToggle, Icon$18 as PancakesIcon, Icon$17 as PencilIcon, Icon$14 as PlayCircleOutlineIcon, Icon$15 as PocketWatchIcon, Icon$a as PoolIcon, Icon$13 as PredictionsIcon, Icon$Z as PresentCheckIcon, Icon$X as PresentNoneIcon, Icon$Y as PresentWonIcon, Icon$12 as PrizeIcon, ProfileAvatar, Progress, Icon$_ as ProgressBunny, Icon$11 as ProposalIcon, Radio, Icon$W as RedditIcon, Icon$V as RefreshIcon, Icon$10 as RemoveIcon, ResetCSS, Icon$T as ResourcesFilledIcon, Icon$U as ResourcesIcon, Icon$S as SafePalIcon, Icon$R as SearchIcon, Icon$Q as SellIcon, Icon$P as ShareIcon, Icon$3 as ShrinkIcon, Skeleton, Slider, Icon$O as SmallDotIcon, Spinner, Icon$N as StarFillIcon, Icon$M as StarLineIcon, Step, Stepper, SubMenu, SubMenuContainer, SubMenuItem, SubMenuItems, Icon$9 as SunIcon, Svg, Icon$K as SwapFillIcon, Icon$L as SwapIcon, Icon$J as SwapVertIcon, Icon$I as SyncAltIcon, Tab, ButtonMenu as TabMenu, Table, Tag, Td, Icon$8 as TeamBattleIcon, Icon$H as TeamPlayerIcon, Icon$G as TelegramIcon, Icon$F as TestnetIcon, Text, Textfield as TextField, Th, ThemeSwitcher$1 as ThemeSwitcher, Icon$E as Ticket, Icon$D as TicketFillIcon, Icon$E as TicketIcon, Icon$C as TicketRound, Timeline, Icon$B as TimerIcon, Toggle, TokenImage, TokenPairImage, Icon$A as TokenPocketIcon, TooltipText, Icon$y as TradeFilledIcon, Icon$z as TradeIcon, Icon$5 as TrophyFillIcon, Icon$x as TrophyGoldIcon, Icon$6 as TrophyIcon, Icon$w as TrustWalletIcon, Icon$u as TuneIcon, Icon$v as TwitterIcon, UserMenu, UserMenuDivider, UserMenuItem, Icon$$ as VerifiedIcon, Icon$t as VisibilityOff, Icon$s as VisibilityOn, Icon$r as VolumeOffIcon, Icon$q as VolumeUpIcon, Icon$p as VoteIcon, Icon$k as WaitIcon, Icon$n as WalletConnectIcon, Icon$l as WalletFilledIcon, Icon$m as WalletIcon, Icon$o as WarningIcon, variants$5 as alertVariants, byTextAscending, byTextDescending, connectorLocalStorageKey, darkTheme as dark, darkColors, lightTheme as light, lightColors, makeRender, links as menuConfig, status as menuStatus, useKonamiCheatCode, useMatchBreakpoints, useModal, useParticleBurst, useTable, useTooltip, useWalletModal };
